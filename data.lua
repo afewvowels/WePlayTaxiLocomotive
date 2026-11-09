@@ -50,6 +50,13 @@ loco.energy_source = {
 
 -- Graphics: flat frames (rotated) and rail ramp frames (sloped).
 -- The model has its own skirt, so no bogies.
+-- Sheets are packed tight: each frame is cropped to the smallest box that
+-- fits every frame of its sheet. px_shift moves the cropped frame back to
+-- where the full-size render had it (dx, dy in sheet pixels).
+local function px_shift(dx, dy, scale)
+  return {SPRITE_SHIFT[1] + dx * scale / 32, SPRITE_SHIFT[2] + dy * scale / 32}
+end
+
 loco.pictures = {
   rotated = {
     layers = {
@@ -57,20 +64,19 @@ loco.pictures = {
         filename = gfx .. "taxi-locomotive.png",
         direction_count = 64,
         line_length = 8,
-        width = 384,
-        height = 384,
+        width = 252,
+        height = 239,
         scale = SPRITE_SCALE,
-        shift = SPRITE_SHIFT,
+        shift = px_shift(0, -58.5, SPRITE_SCALE),
       },
       {
-        -- Shadow: 8x8 frames of 448x448, same order and center as the body.
         filename = gfx .. "taxi-locomotive-shadow.png",
         direction_count = 64,
         line_length = 8,
-        width = 448,
-        height = 448,
+        width = 266,
+        height = 154,
         scale = SPRITE_SCALE,
-        shift = SPRITE_SHIFT,
+        shift = px_shift(56, -2, SPRITE_SCALE),
         draw_as_shadow = true,
       },
     },
@@ -85,21 +91,20 @@ loco.pictures = {
         direction_count = 160,
         line_length = 10,
         lines_per_file = 16,
-        width = 448,
-        height = 448,
+        width = 258,
+        height = 253,
         scale = SLOPED_SCALE,
-        shift = SPRITE_SHIFT,
+        shift = px_shift(0, -24.5, SLOPED_SCALE),
       },
-      -- Sloped shadow goes here once it's re-rendered at 768x512:
       {
         filenames = {gfx .. "taxi-locomotive-sloped-shadow-1.png"},
         direction_count = 160,
         line_length = 10,
         lines_per_file = 16,
-        width = 768,
-        height = 512,
+        width = 392,
+        height = 261,
         scale = SLOPED_SCALE,
-        shift = SPRITE_SHIFT,
+        shift = px_shift(119, 38.5, SLOPED_SCALE),
         draw_as_shadow = true,
       },
     },

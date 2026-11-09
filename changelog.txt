@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2026-11-09
+  Graphics:
+    - Packed the sprite sheets tighter: every frame is cropped to just the taxi and its shadow, cutting the graphics from about 31 MB to about 9 MB.
+    - Removed faint stray pixels around the shadows.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2026-11-06
   Balancing:
