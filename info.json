@@ -1,0 +1,11 @@
+{
+  "name": "WePlayTaxiLocomotive",
+  "version": "0.1.6",
+  "factorio_version": "2.1",
+  "title": "WePlay: Taxi Train",
+  "author": "WePlay",
+  "description": "A zippy half-size taxi locomotive (two fit in one train car slot), 518 km/h and fully electric: it charges from your power poles whenever it stops. Perfect for getting around your base. Pairs great with WePlay: Choo-Choo Taxi!",
+  "dependencies": [
+    "base >= 2.1.0"
+  ]
+}

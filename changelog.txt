@@ -1,0 +1,37 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2026-11-06
+  Balancing:
+    - Power output lowered from 5 MW to 1 MW and weight raised from 250 to 300, so a full battery lasts about 100 seconds at full throttle.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 2026-11-06
+  Features:
+    - The taxi is now electric! It has a 100 MJ battery and charges at 10 MW whenever it's stopped near a powered pole.
+  Changes:
+    - Power output raised from 3 MW to 5 MW.
+    - Coal and other fuel can no longer go in the taxi. Fuel left in existing taxis is dropped on the ground next to them.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 2026-11-06
+  Features:
+    - Added shadow sprite sheet.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2026-11-06
+  Features:
+    - The taxi now tilts on rail ramps (elevated rails), with 160 Blender-rendered sloped frames.
+  Changes:
+    - Moved the head and tail lights in to match the smaller body.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-11-06
+  Features:
+    - Adjust scale of locomotive.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-11-05
+  Features:
+    - Half-size taxi locomotive (3 tiles long) with Blender-rendered graphics and shadows.
+    - Top speed 518 km/h, 3 MW power, weight 250.
+    - Unlocked by the Railway research: 10 iron plates and 5 iron gear wheels.
